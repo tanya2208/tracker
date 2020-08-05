@@ -1,0 +1,355 @@
+body{
+  margin: 0;
+  background: #ECF6FB;
+  font-family: 'Montserrat';
+}
+header{
+  width: 100%;
+  height: 60px;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.14);
+}
+header img{
+  height: 50px;
+  margin-left: 40px;
+  position: absolute;
+  left: 0;
+}
+h1{
+  font-weight: 550;
+  font-size: 24px;
+  line-height: 24px;
+  color: #596780;
+}
+
+.tracker-container{
+  width: 100%;
+  position: relative;
+  padding-top: 40px;
+}
+
+.search-field{
+  width: 339px;
+  height: 33px;
+  border: none;
+  box-shadow: 4px 4px 17px rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  outline: none;
+  padding-left: 32px;
+  color: #596780;
+  background: #fff url(magnifier.png) no-repeat 8px 50%;
+  font-family: 'Montserrat' !important;
+}
+input::-webkit-input-placeholder { color: #596780; opacity: 40%; }
+
+.employees-container{
+  width: 95%;
+  display: grid;
+  /* grid-template-rows: repeat(4, 170px); */
+  grid-template-columns: repeat(3, 32%);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 80px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+.dev-container{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.pm-container{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.qa-container{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.dev-container, .pm-container, .qa-container, .ux-container,.founder-container, .marketing-container,.hr-container{
+  background: #FFFFFF;
+  box-shadow: 4px 4px 17px rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+}
+.employee-array{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin: 25px 30px 0 30px;
+}
+.department-label{
+  font-weight: 550;
+  font-size: 18px;
+  line-height: 22px;
+  color: #596780;
+}
+.employee{
+  width: 50px;
+  height: 94px;
+  position: relative;
+  text-align: center;
+  margin: 0 8px 16px;
+  cursor: pointer;
+}
+.photo{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ECF6FB;
+  border: none;
+}
+.name{
+  color: #596780;
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: 4px;
+}
+.status{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  border: 2px solid #FFFFFF;
+  z-index: 2;
+}
+.red{
+  background: #E34141;
+}
+.green{
+  background: #2BE079;
+}
+.yellow{
+  background: #FBDE47;
+}
+.toggle{
+  display: flex;
+}
+.toggle p{
+  font-size: 12px;
+  align-items: center;
+  margin-left: 8px;
+  color: #596780;
+}
+.tools{
+  position: absolute;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items:center;
+}
+
+.popover-container{
+  width: 500px;
+  height: 200px;
+  display: flex;
+}
+.big{
+  height: 140px;
+  width: 140px;
+  margin: 22px 0 0 28px;
+}
+.info{
+  margin: 22px 0 0 28px;
+}
+.popover-name{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  color: #59677F;
+}
+.popover-status{
+  width: 110px;
+  height: 24px;
+  border-radius: 6px;
+  margin-top: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff
+}
+.skype, .email{
+  font-size: 14px;
+  line-height: 14px;
+  color: #59677F;
+}
+.skype{
+  margin: 22px 0 10px 0;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  margin-left: 19px;
+  margin-top: 8px;
+}
+ .switch input {display:none;}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background: #2BE079 url(check.png) no-repeat 8px 50%;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+.slider.round {
+  border-radius: 12px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.panel-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.popover-btns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 22px;
+}
+.add-to-fav-btn{
+  border: none;
+  box-shadow: 4px 4px 17px rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Montserrat' !important;
+  cursor: pointer;
+  width: 160px;
+  height: 25px;
+  background: #59677F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete-btn{
+  border: none;
+  box-shadow: 4px 4px 17px rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Montserrat' !important;
+  cursor: pointer;
+  width: 90px;
+  height: 25px;
+  background: #FF7979;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  cursor:
+}
+
+.office{
+  font-size: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12px;
+  border-radius: 10px;
+  position: absolute;
+  top: -5px;
+  right: -20px;
+  width: 43px;
+  z-index: 2;
+  background: #5BC4FF;
+  color: #fff;
+}
+
+.in-office{
+  display: flex;
+}
+.not-in-office{
+  display: none;
+}
+
+.popover-btns{
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media (max-width: 1023px) {
+  .tools{
+    width: 95%;
+    display: flex;
+    align-items:center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .favorites-container{
+    width: 70vw;
+    height: 50vh;
+  }
+  .employee{
+    width: 70px;
+  }
+  .photo{
+    width: 70px;
+    height: 70px;
+  }
+  .status{
+    top: 50px;
+  }
+  .name{
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .office{
+    height: 14px;
+    top: 0;
+  }
+  .employee-array{
+    margin: 0;
+  }
+ }
